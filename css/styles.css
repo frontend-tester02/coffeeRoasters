@@ -113,6 +113,7 @@ img {
 }
 
 .site-header-logo-link {
+  flex-shrink: 0;
   display: flex;
   text-decoration: none;
 }
@@ -155,11 +156,31 @@ img {
   color: var(--text-color);
   text-transform: uppercase;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .sitenav-link:hover {
   color:var(--accent-color-green) ;
+}
 
+/* HERO */
+.hero {
+}
+.hero-container {
+}
+.container {
+}
+.hero-info-wrapper {
+}
+.her-heading {
+}
+.hero-text {
+}
+.button {
+}
+.button-green {
+}
+.hero-img {
 }
 
 
