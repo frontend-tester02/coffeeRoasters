@@ -5,6 +5,10 @@
   --accent-color-green-80:rgba(10, 119, 95, 0.8);
   --accent-color-green-60:rgba(10, 119, 95, 0.6);
   --accent-color-light-brown:#c99b67;
+  --accent-color-light-brown-80:rgba(201, 155, 103, 0.8);
+  --accent-color-light-brown-60:rgba(201, 155, 103, 0.6);
+  --light-brown:#f3d7b7;
+  --light-bg:#f8f8f2;
   --outline-color:var(--accent-color-green);
 
 }
@@ -58,7 +62,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Roboto" "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.75;
   background-color: #fff;
@@ -114,17 +118,34 @@ img {
   background-color: var(--accent-color-green-60);
 }
 
+.button-brown {
+  background-color: var(--accent-color-light-brown);
+  color: #fff;
+}
+
+.button-brown:hover {
+  background-color: var(--accent-color-light-brown-80);
+
+}
+
+.button-brown:active {
+  background-color: var(--accent-color-light-brown-60);
+}
+
 /* MAIN-CONTENT */
 
 .main-content {
   flex-grow: 1;
+  padding-top: 20px;
+  padding-bottom: 50px;
 }
 
 
 /* SITE-HEADER-HERO-WRAPPER */
 
 .site-header-hero-wrapper {
-  background-image: url(../img/light-bg-img.jpg);
+  background-color: var(--light-brown);
+  background-image: url(../img/site-header-intro-bg.jpg);
 }
 
 /* SITE-HEADER */
@@ -195,9 +216,6 @@ img {
 }
 
 /* HERO */
-.hero {
-
-}
 .hero-container {
   display: flex;
   padding-left: 0;
@@ -240,6 +258,70 @@ img {
   height: 696px;
 }
 
+/* INDEX-COLLECTION */
+
+.index-collection-inner {
+  padding: 50px 143px;
+  background-color: var(--light-bg);
+  background-image: url(../img/light-bg.jpg);
+
+}
+.index-collection-heading {
+  margin-top: 0;
+  margin-bottom: 80px;
+  font-size: 50px;
+  line-height: normal;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+}
+.index-collection-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.index-collection-item {
+  display: flex;
+  align-items: center;
+
+}
+
+.index-collection-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.index-collection-img {
+  flex-shrink: 0;
+  width: 450px;
+  height: 375px;
+  object-fit: cover;
+}
+.index-collection-info {
+  flex-grow: 1;
+  padding-left: 117px;
+  padding-right: 117px;
+
+}
+.index-collection-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 48px;
+  line-height: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+
+}
+.index-collection-text {
+  margin: 0;
+  font-size: 22px;
+  line-height: 34px;
+  color: var(--text-color);
+}
+
+.index-collection-text:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 
 /* RETINA BG */
 
@@ -251,8 +333,14 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
   .site-header-hero-wrapper {
-    background-image: url(../img/light-bg-img@2X.jpg);
+    background-image: url(../img/site-header-intro-bg@2x.jpg);
   }
+
+  .index-collection-inner {
+    background-image: url(../img/light-bg.jpg);
+
+  }
+
 
 
 }
